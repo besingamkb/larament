@@ -32,7 +32,7 @@ class CompanyFactory extends Factory
      */
     public function definition(): array
     {
-        $name = $this->faker->words(rand(3, 10), true);
+        $name = $this->faker->unique->words(3, true);
         $slug = Str::replace(" ", "-", strtolower($name));
         return [
             'name' => $name,

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $company = Company::factory()->count(10)->hasUsers(20)->create();
+        $company = Company::factory()->count(100)->hasUsers(200)->create();
 //        dd($company->pluck('id'));
         User::factory()->create([
             'email' => 'mark@kevin.com',
