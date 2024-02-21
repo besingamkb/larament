@@ -27,6 +27,9 @@ class AppPanelProvider extends PanelProvider
             ->id('app')
             ->path('/')
             ->login()
+            ->brandName('ABKD Studios')
+            ->brandLogo(asset('abkd.jpeg'))
+            ->brandLogoHeight('50px')
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -37,8 +40,8 @@ class AppPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+//                Widgets\AccountWidget::class,
+//                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
